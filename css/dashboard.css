@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.name{
+font-family: 'Courier New', Courier, monospace;
+font-size: 27px;
+text-align: left;
+display: flex;
+font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.sidebar .logo h2 {
+    text-align: center;
+    color: #AF8F6F;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sidebar .menu li {
+    margin: 15px 0;
+}
+
+.sidebar .menu li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .menu li a:hover,
+.sidebar .menu li a.active {
+    background: #AF8F6F;
+    color: #ffffff;
+}
+
+.sidebar .menu li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.sidebar .settings {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidebar .settings a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Main Section */
+.home-section {
+    flex-grow: 1;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.home-section nav {
+    height: 80px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-section nav .sidebar-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.home-section nav .sidebar-button i {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.home-section nav .sidebar-button:hover i {
+    color: #AF8F6F;
+}
+
+.home-section nav .profile-details {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #f5f6fa;
+    border-radius: 8px;
+    border: 2px solid #efeef1;
+}
+
+.home-section nav .profile-details .admin_name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar .logo h2 {
+        display: none;
+    }
+
+    .sidebar .menu li a {
+        justify-content: center;
+    }
+
+    .sidebar .menu li a .links_name {
+        display: none;
+    }
+
+    .sidebar .settings {
+        margin-top: auto;
+    }
+
+    .home-section {
+        width: calc(100% - 60px);
+    }
+
+    .home-section nav {
+        width: calc(100% - 60px);
+    }
+}

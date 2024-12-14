@@ -1,0 +1,182 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo h2 {
+    text-align: center;
+    color: #AF8F6F;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu {
+    list-style: none;
+}
+
+.sidebar .menu li {
+    margin: 15px 0;
+}
+
+.sidebar .menu li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.sidebar .menu li a:hover {
+    background: #AF8F6F;
+    color: #fff;
+}
+
+.sidebar .menu li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Main Section */
+.home-section {
+    flex: 1;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+/* Header Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Section */
+.menu-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Tambah Produk */
+.add-product-form {
+    margin-bottom: 20px;
+}
+
+.add-product-form h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.add-product-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-product-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.add-product-form button {
+    padding: 10px 20px;
+    background: #AF8F6F;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-product-form button:hover {
+    background: #805c45;
+}
+
+/* Table Styling */
+.product-list {
+    overflow-x: auto;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-list th,
+.product-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-list th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+.product-list tbody tr:hover {
+    background: #f9f9f9;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .home-section {
+        padding: 10px;
+    }
+
+    .add-product-form input,
+    .add-product-form textarea,
+    .add-product-form button {
+        font-size: 14px;
+    }
+
+    .product-list table {
+        font-size: 14px;
+    }
+}
